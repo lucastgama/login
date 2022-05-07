@@ -1,0 +1,189 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+#background {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    295deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 71, 121, 1) 36%,
+    rgba(8, 138, 201, 1) 66%,
+    rgba(7, 149, 209, 1) 100%
+  );
+}
+
+.panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 1);
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 400px;
+  display: flex;
+}
+
+.wrapper-background {
+  background-color: rgba(7, 149, 209, 0.2);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.wrapper-form {
+  position: relative;
+  width: 50%;
+}
+.wrapper-form form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper-form form label {
+  font-size: 18px;
+  color: #333;
+}
+.wrapper-form form label input {
+  font-size: 17px;
+  color: #333;
+  border: solid 1px #888;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+.wrapper-form span {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#save-user {
+  margin-left: 5px;
+}
+.social-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: rgba(9, 71, 121, 1);
+}
+.social-account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(9, 71, 121, 1);
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+.social-account:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+.btn-login {
+  background: linear-gradient(
+      295deg,
+      rgba(9, 71, 121, 1) 0%,
+      rgba(8, 138, 201, 1)
+    )
+    100%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+}
+.btn-login:hover {
+  background: linear-gradient(
+    295deg,
+    rgba(8, 138, 201, 1) 0%,
+    rgba(9, 71, 121, 1) 100%
+  );
+}
+
+/* Media query Mobile*/
+
+@media only screen and (max-width: 620px) {
+  .panel {
+    width: 250px;
+    height: 380px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper-background {
+    background-image: url(https://images.vexels.com/media/users/3/152299/isolated/lists/4f63af6a16633f2bfd29063205f2882c-desenho-de-voar-de-astronauta.png);
+    background-color: rgba(9, 71, 121, 1);
+    background-size: auto;
+    background-position: top center;
+    position: absolute;
+    top: -10%;
+    width: 120px;
+    height: 120px;
+    transform: translate();
+    border-radius: 50%;
+    border: solid 2px #333;
+    height: 30%;
+  }
+  .wrapper-background img {
+    display: none;
+  }
+  .wrapper-form {
+    height: 70%;
+  }
+  .wrapper-form form {
+    position: relative;
+    justify-content: space-between;
+  }
+  .wrapper-form form label {
+    font-size: 15px;
+  }
+  .wrapper-form form label input {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .wrapper-form form span {
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .btn-login {
+    font-size: 12px;
+    margin: 10px;
+  }
+  .social-account {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+}
